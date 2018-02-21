@@ -63,6 +63,7 @@ class App extends Component {
     setInterval(() => {
       this.props.moveObjects(this.canvasMousePosition);
     }, 10);
+    
     window.onresize = () => {
       const cnv = document.getElementById('aliens-go-home-canvas');
       cnv.style.width = `${window.innerWidth}px`;
