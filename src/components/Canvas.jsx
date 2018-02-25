@@ -17,6 +17,15 @@ const Canvas = (props) => {
   const gameHeight = 1200;
   const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
 
+  const lives = [];
+  for (let i = 0; i < props.gameState.lives; i++) {
+    const heartPosition = {
+      x: -180 - (i * 70),
+      y: 35
+    };
+    lives.push(<Heart key={i} position={heartPosition}/>);
+  }
+
   return (
     <svg
       id="aliens-go-home-canvas"
@@ -62,6 +71,7 @@ const Canvas = (props) => {
           ))}
         </g>
       }
+      {lives}
     </svg>
   );
 };
