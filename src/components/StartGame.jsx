@@ -39,7 +39,7 @@ const StartGame = (props) => {
   );
 };
 
-StartGame.PropTypes = {
+StartGame.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
